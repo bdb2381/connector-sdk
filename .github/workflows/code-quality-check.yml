@@ -67,7 +67,7 @@ jobs:
         if: env.SKIP == 'false'
         run: |
           echo "Running flake8 on: $CHANGED"
-          flake8 $CHANGED > flake8_output.txt || true
+          flake8 "$CHANGED" > flake8_output.txt || true
 
       - name: Format Flake8 results as PR comment
         if: env.SKIP == 'false'
